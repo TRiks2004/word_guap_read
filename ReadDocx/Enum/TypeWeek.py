@@ -6,6 +6,6 @@ class Week:
         self.name = name
 
 class TypeWeek(enum.Enum):
-    Numerator = Week(0, "Числитель")
-    Denominator = Week(1, "Знаменатель")
+    Numerator = Week(1, "Числитель")
+    Denominator = Week(0, "Знаменатель")
     Error = Week(-1, "Error") 

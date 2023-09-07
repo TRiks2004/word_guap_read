@@ -1,11 +1,12 @@
 from ReadDocx.ReadDocx import ReadDocx
 
+from BD.List_Genification import GenificationList
+
 if __name__ == '__main__':
     path_doc = "SH.docx"
-    schedule = ReadDocx(path_doc).schedule_list[0]
+    schedule = ReadDocx(path_doc).schedule_list
 
-    print(schedule.number, schedule.type_week.value.name)
-    for i in schedule.matrix:
-        print(i.day.value.day)
-        for j in i.couple:
-            print(j.number, j.couple, j.teacher, j.classroom)
+    
+    r = GenificationList(schedule_week=schedule)
+
+

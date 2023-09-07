@@ -35,3 +35,12 @@ class Сouple:
         self.couple = ' '.join(words[:tech_count * -2])
         self.teacher = tech
         self.classroom = classroom
+
+    def get_merge_str(self, list_items: list[str]):
+        return list_items if len(list_items) < 1 else "\n".join(list_items)
+
+    def get_teacher_merge_str(self):
+        return self.get_merge_str(self.teacher)
+
+    def get_classroom_merge_str(self):
+        return self.get_merge_str(self.classroom)
